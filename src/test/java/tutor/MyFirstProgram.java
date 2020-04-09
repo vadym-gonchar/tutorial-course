@@ -9,7 +9,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class MyFirstProgram {
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver0 = new ChromeDriver();
         WebDriver driver1 = new FirefoxDriver();
         WebDriver driver2 = new SafariDriver();
         WebDriver driver3 = new OperaDriver();
