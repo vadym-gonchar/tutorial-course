@@ -1,18 +1,20 @@
 package tutor;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Test;
 
 public class MyFirstProgram {
-    public static void main(String[] args) {
-        WebDriver driver0 = new ChromeDriver();
-        WebDriver driver1 = new FirefoxDriver();
-        WebDriver driver2 = new SafariDriver();
-        WebDriver driver3 = new OperaDriver();
-        WebDriver driver4 = new EdgeDriver();
+    WebDriver driver;
+
+    @Test(priority = 1)
+    public void firstTest() {
+        driver = new ChromeDriver();
+        driver.get("https://github.com/login");
+        driver.manage().window().maximize();
+        driver.findElement(By.cssSelector("[id='login_field']")).sendKeys("vadym-gonchar");
+
+        driver.quit();
     }
 }
