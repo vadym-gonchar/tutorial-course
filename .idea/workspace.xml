@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="65c58c9b-e88d-4d68-a3e7-4da7d8e92158" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tutor/MyFirstProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tutor/MyFirstProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tutor/MyFirstProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tutor/MyFirstProgram.class" afterDir="false" />
     </list>
@@ -43,12 +44,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunManager" selected="TestNG.MyFirstProgram">
+    <configuration name="MyFirstProgram (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="tutorial-course" />
+      <option name="PACKAGE_NAME" value="tutor" />
+      <option name="MAIN_CLASS_NAME" value="tutor.MyFirstProgram" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyFirstProgram" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="tutorial-course" />
       <option name="PACKAGE_NAME" value="tutor" />
@@ -87,6 +99,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.MyFirstProgram" />
+        <item itemvalue="TestNG.MyFirstProgram (1)" />
         <item itemvalue="TestNG.MyFirstProgram.firstTest" />
         <item itemvalue="TestNG.MyFirstProgram.getStarted" />
       </list>
@@ -115,26 +128,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="188" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586457041175" />
-    <state width="1557" height="39" key="GridCell.Tab.0.bottom" timestamp="1586649315282">
+    <state width="1540" height="124" key="GridCell.Tab.0.bottom" timestamp="1586881087880">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="39" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586649315282" />
-    <state width="1557" height="225" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1586480533241" />
-    <state width="1557" height="39" key="GridCell.Tab.0.center" timestamp="1586649315282">
+    <state width="1540" height="124" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586881087880" />
+    <state width="1637" height="154" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139478" />
+    <state width="1540" height="228" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1586876640707" />
+    <state width="1540" height="124" key="GridCell.Tab.0.center" timestamp="1586881087880">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="39" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586649315282" />
-    <state width="1557" height="225" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1586480533240" />
-    <state width="1557" height="39" key="GridCell.Tab.0.left" timestamp="1586649315281">
+    <state width="1540" height="124" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586881087880" />
+    <state width="1637" height="154" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139477" />
+    <state width="1540" height="228" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1586876640706" />
+    <state width="1540" height="124" key="GridCell.Tab.0.left" timestamp="1586881087879">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="39" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586649315281" />
-    <state width="1557" height="225" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1586480533240" />
-    <state width="1557" height="39" key="GridCell.Tab.0.right" timestamp="1586649315282">
+    <state width="1540" height="124" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586881087879" />
+    <state width="1637" height="154" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139477" />
+    <state width="1540" height="228" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1586876640706" />
+    <state width="1540" height="124" key="GridCell.Tab.0.right" timestamp="1586881087880">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="39" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586649315282" />
-    <state width="1557" height="225" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1586480533240" />
+    <state width="1540" height="124" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586881087880" />
+    <state width="1637" height="154" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139477" />
+    <state width="1540" height="228" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1586876640706" />
     <state x="330" y="88" key="Maven.ArtifactSearchDialog" timestamp="1586477123968">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -143,16 +160,16 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="623" y="367" key="ReplaceDuplicatesPrompt/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586648987251" />
-    <state x="280" y="7" key="SettingsEditor" timestamp="1586481022899">
+    <state x="269" y="7" key="SettingsEditor" timestamp="1586711135262">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="280" y="7" key="SettingsEditor/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586452162710" />
+    <state x="269" y="7" key="SettingsEditor/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586711135262" />
     <state x="280" y="7" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1586481022899" />
-    <state x="508" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1586645912434">
+    <state x="508" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1586875697585">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586645912434" />
-    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1586480580544" />
+    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586772593116" />
+    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1586875697585" />
     <state x="530" y="192" width="540" height="482" key="extract.method.dialog" timestamp="1586648979519">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
