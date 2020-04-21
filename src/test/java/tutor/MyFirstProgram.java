@@ -7,47 +7,47 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MyFirstProgram {
-    WebDriver driver;
+  WebDriver driver = new ChromeDriver();
+  LoginPageLocators loginPageLocators = new LoginPageLocators();
+  LoginPageHelper loginPageHelper = new LoginPageHelper(driver);
+  HeaderTabLocators headerTabLocators = new HeaderTabLocators();
 
-    @Test(priority = 1)
-    public void firstTest() {
+  @Test(priority = 1)
+  public void loginTest() {
+    driver.navigate().to("https://github.com/login");
+    loginPageHelper.isLoginPresent(loginPageLocators.loginField, 10);
+    driver.manage().window().fullscreen();
+    driver.findElement(loginPageLocators.loginField).sendKeys("aqa-tutoring");
+    driver.findElement(loginPageLocators.passwordField).sendKeys("aqatest123");
+    driver.findElement(loginPageLocators.signInButton).click();
+  }
 
-        driver = new ChromeDriver();
-        mainJob();
+  @Test(priority = 2)
+  public void headerTabTest() {
 
-        /*driver = new FirefoxDriver();
-        mainJob();*/
+    boolean isPullRequestsPresent = driver.findElement(headerTabLocators.pullRequests).isDisplayed();
+    Assert.assertTrue(isPullRequestsPresent);
 
-        /*driver = new EdgeDriver();
-        mainJob();*/
+    boolean isIssuesPresent = driver.findElement(headerTabLocators.issues).isDisplayed();
+    Assert.assertTrue(isIssuesPresent);
 
-        /*driver = new InternetExplorerDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        mainJob();*/
-    }
+    boolean isMarketplacePresent = driver.findElement(headerTabLocators.marketplace).isDisplayed();
+    Assert.assertTrue(isMarketplacePresent);
 
-    public void mainJob() {
-        driver.get("https://github.com/login");
-        driver.manage().window().fullscreen();
-        driver.findElement(By.name("login")).sendKeys("aqa-tutoring");
-        driver.findElement(By.name("password")).sendKeys("aqatest123");
-        driver.findElement(By.name("commit")).click();
+    boolean isExplorePresent = driver.findElement(headerTabLocators.explore).isDisplayed();
+    Assert.assertTrue(isExplorePresent);
+  }
 
-        boolean isPullRequestsPresent = driver.findElement(By.xpath("//a[2]")).isDisplayed();
-        Assert.assertTrue(isPullRequestsPresent);
-        boolean isIssuesPresent = driver.findElement(By.linkText("Issues")).isDisplayed();
-        Assert.assertTrue(isIssuesPresent);
-        boolean isMarketplacePresent = driver.findElement(By.linkText("Marketplace")).isDisplayed();
-        Assert.assertTrue(isMarketplacePresent);
-        boolean isExplorePresent = driver.findElement(By.xpath("//a[contains(.,'Explore')]")).isDisplayed();
-        Assert.assertTrue(isExplorePresent);
+  @Test(priority = 3)
+  public void marketplacePageTest() {
+    driver.get("https://github.com/marketplace");
 
-        driver.get("https://github.com/marketplace");
+    boolean isExploreFreeAppsButtonPresent = driver.findElement(By.linkText("Explore free apps")).isDisplayed();
+    Assert.assertTrue(isExploreFreeAppsButtonPresent);
 
-        boolean isExploreFreeAppsButtonPresent = driver.findElement(By.linkText("Explore free apps")).isDisplayed();
-        Assert.assertTrue(isExploreFreeAppsButtonPresent);
+    boolean isAppsTypePresent = driver.findElement(By.linkText("Apps")).isDisplayed();
+    Assert.assertTrue(isAppsTypePresent);
 
-        boolean isAppsTypePresent = driver.findElement(By.linkText("Apps")).isDisplayed();
-        Assert.assertTrue(isAppsTypePresent);
-    }
+    driver.quit();
+  }
 }
