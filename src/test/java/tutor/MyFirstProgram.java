@@ -11,6 +11,7 @@ public class MyFirstProgram {
   LoginPageLocators loginPageLocators = new LoginPageLocators();
   LoginPageHelper loginPageHelper = new LoginPageHelper(driver);
   HeaderTabLocators headerTabLocators = new HeaderTabLocators();
+  MarketplaceLocators marketplaceLocators = new MarketplaceLocators();
 
   @Test(priority = 1)
   public void loginTest() {
@@ -42,11 +43,48 @@ public class MyFirstProgram {
   public void marketplacePageTest() {
     driver.get("https://github.com/marketplace");
 
-    boolean isExploreFreeAppsButtonPresent = driver.findElement(By.linkText("Explore free apps")).isDisplayed();
+    boolean isExploreFreeAppsButtonPresent = driver.findElement(marketplaceLocators.exploreFreeAppsButton).isDisplayed();
     Assert.assertTrue(isExploreFreeAppsButtonPresent);
 
-    boolean isAppsTypePresent = driver.findElement(By.linkText("Apps")).isDisplayed();
+    boolean isExploreActionsButtonPresent = driver.findElement(marketplaceLocators.exploreActionsButton).isDisplayed();
+    Assert.assertTrue(isExploreActionsButtonPresent);
+
+    boolean isAppsTypePresent = driver.findElement(marketplaceLocators.appsTypes).isDisplayed();
     Assert.assertTrue(isAppsTypePresent);
+
+    boolean isActionsTypePresent = driver.findElement(marketplaceLocators.actionsTypes).isDisplayed();
+    Assert.assertTrue(isActionsTypePresent);
+
+    boolean isChatPresent = driver.findElement(marketplaceLocators.chatCategories).isDisplayed();
+    Assert.assertTrue(isChatPresent);
+
+    boolean isCodeInspectorPresent = driver.findElement(marketplaceLocators.codeInspectorTrending).isDisplayed();
+    Assert.assertTrue(isCodeInspectorPresent);
+
+    driver.findElement(marketplaceLocators.svg).click();
+    boolean isFreeFiltersPresent = driver.findElement(marketplaceLocators.freeFilters).isDisplayed();
+    Assert.assertTrue(isFreeFiltersPresent);
+
+    boolean isVerifiedPresent = driver.findElement(marketplaceLocators.verifiedVerification).isDisplayed();
+    Assert.assertTrue(isVerifiedPresent);
+
+    boolean isVueggPresent = driver.findElement(marketplaceLocators.vueggRecentlyAdded).isDisplayed();
+    Assert.assertTrue(isVueggPresent);
+
+    boolean isCodeClimatePresent = driver.findElement(marketplaceLocators.codeClimateCodeQuality).isDisplayed();
+    Assert.assertTrue(isCodeClimatePresent);
+
+    boolean isBuddyPresent = driver.findElement(marketplaceLocators.buddyCI).isDisplayed();
+    Assert.assertTrue(isBuddyPresent);
+
+    boolean isSentryPresent = driver.findElement(marketplaceLocators.sentryMonitoring).isDisplayed();
+    Assert.assertTrue(isSentryPresent);
+
+    boolean isStalePresent = driver.findElement(marketplaceLocators.stalePM).isDisplayed();
+    Assert.assertTrue(isStalePresent);
+
+    boolean isFooterTermsPresent = driver.findElement(marketplaceLocators.footerTerms).isDisplayed();
+    Assert.assertTrue(isFooterTermsPresent);
 
     driver.quit();
   }
