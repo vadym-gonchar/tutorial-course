@@ -1,4 +1,4 @@
-package tutor;
+package course;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 
 public class MyFirstProgram {
   WebDriver driver = new ChromeDriver();
+
   LoginPageLocators loginPageLocators = new LoginPageLocators();
-  LoginPageHelper loginPageHelper = new LoginPageHelper(driver);
   HeaderTabLocators headerTabLocators = new HeaderTabLocators();
   MarketplaceLocators marketplaceLocators = new MarketplaceLocators();
   ElementsHelper elementsHelper = new ElementsHelper(driver);
@@ -16,7 +16,7 @@ public class MyFirstProgram {
   @Test(priority = 1)
   public void loginTest() {
     driver.navigate().to("https://github.com/login");
-    loginPageHelper.isLoginPresent(loginPageLocators.loginField, 10);
+    elementsHelper.isElementPresent(loginPageLocators.loginField);
     driver.manage().window().fullscreen();
     driver.findElement(loginPageLocators.loginField).sendKeys("aqa-tutoring");
     driver.findElement(loginPageLocators.passwordField).sendKeys("aqatest123");

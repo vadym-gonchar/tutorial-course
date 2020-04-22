@@ -1,4 +1,4 @@
-package tutor;
+package course;
 
 import org.openqa.selenium.By;
 
