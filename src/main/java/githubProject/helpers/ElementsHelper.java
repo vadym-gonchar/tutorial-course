@@ -1,4 +1,4 @@
-package course;
+package githubProject.helpers;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -14,9 +14,9 @@ public class ElementsHelper {
     this.driver = driver;
   }
 
-  public String getTextofClickableElement(By element){
+  public String getTextofClickableElement(By element, int timeout){
     try {
-      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
       wait.until(ExpectedConditions.elementToBeClickable(element));
       return driver.findElement(element).getText();
     } catch (NoSuchElementException e){

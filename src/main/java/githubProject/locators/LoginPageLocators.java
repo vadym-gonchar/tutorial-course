@@ -1,4 +1,4 @@
-package course;
+package githubProject.locators;
 
 import org.openqa.selenium.By;
 
