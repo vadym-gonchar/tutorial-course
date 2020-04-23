@@ -16,7 +16,7 @@ public class MyFirstProgram {
   @Test(priority = 1)
   public void loginTest() {
     driver.navigate().to("https://github.com/login");
-    elementsHelper.isElementPresent(loginPageLocators.loginField);
+    elementsHelper.getTextofClickableElement(loginPageLocators.loginField);
     driver.manage().window().fullscreen();
     driver.findElement(loginPageLocators.loginField).sendKeys("aqa-tutoring");
     driver.findElement(loginPageLocators.passwordField).sendKeys("aqatest123");
@@ -26,101 +26,47 @@ public class MyFirstProgram {
   @Test(priority = 2)
   public void headerTabTest() {
 
-    boolean isPullRequestsPresent = driver.findElement(headerTabLocators.pullRequests).isDisplayed();
-    Assert.assertTrue(isPullRequestsPresent);
-    boolean isPullRequestsClickable = elementsHelper.isClickable(headerTabLocators.pullRequests);
-    Assert.assertTrue(isPullRequestsClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(headerTabLocators.pullRequests), "Pull requests");
 
-    boolean isIssuesPresent = driver.findElement(headerTabLocators.issues).isDisplayed();
-    Assert.assertTrue(isIssuesPresent);
-    boolean isIssuesClickable = elementsHelper.isClickable(headerTabLocators.issues);
-    Assert.assertTrue(isIssuesClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(headerTabLocators.issues), "Issues");
 
-    boolean isMarketplacePresent = driver.findElement(headerTabLocators.marketplace).isDisplayed();
-    Assert.assertTrue(isMarketplacePresent);
-    boolean isMarketplaceClickable = elementsHelper.isClickable(headerTabLocators.marketplace);
-    Assert.assertTrue(isMarketplaceClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(headerTabLocators.marketplace), "Marketplace");
 
-    boolean isExplorePresent = driver.findElement(headerTabLocators.explore).isDisplayed();
-    Assert.assertTrue(isExplorePresent);
-    boolean isExploreClickable = elementsHelper.isClickable(headerTabLocators.explore);
-    Assert.assertTrue(isExploreClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(headerTabLocators.explore), "Explore");
   }
 
   @Test(priority = 3)
   public void marketplacePageTest() {
     driver.get("https://github.com/marketplace");
 
-    boolean isExploreFreeAppsButtonPresent = driver.findElement(marketplaceLocators.exploreFreeAppsButton).isDisplayed();
-    Assert.assertTrue(isExploreFreeAppsButtonPresent);
-    boolean isExploreFreeAppsButtonClickable = elementsHelper.isClickable(marketplaceLocators.exploreFreeAppsButton);
-    Assert.assertTrue(isExploreFreeAppsButtonClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.exploreFreeAppsButton), "Explore free apps");
 
-    boolean isExploreActionsButtonPresent = driver.findElement(marketplaceLocators.exploreActionsButton).isDisplayed();
-    Assert.assertTrue(isExploreActionsButtonPresent);
-    boolean isExploreActionsButtonClickable = elementsHelper.isClickable(marketplaceLocators.exploreActionsButton);
-    Assert.assertTrue(isExploreActionsButtonClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.exploreActionsButton), "Explore Actions");
 
-    boolean isAppsTypePresent = driver.findElement(marketplaceLocators.appsTypes).isDisplayed();
-    Assert.assertTrue(isAppsTypePresent);
-    boolean isAppsTypeClickable = elementsHelper.isClickable(marketplaceLocators.appsTypes);
-    Assert.assertTrue(isAppsTypeClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.appsTypes), "Apps");
 
-    boolean isActionsTypePresent = driver.findElement(marketplaceLocators.actionsTypes).isDisplayed();
-    Assert.assertTrue(isActionsTypePresent);
-    boolean isActionsTypeClickable = elementsHelper.isClickable(marketplaceLocators.actionsTypes);
-    Assert.assertTrue(isActionsTypeClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.actionsTypes), "Actions");
 
-    boolean isChatPresent = driver.findElement(marketplaceLocators.chatCategories).isDisplayed();
-    Assert.assertTrue(isChatPresent);
-    boolean isChatClickable = elementsHelper.isClickable(marketplaceLocators.chatCategories);
-    Assert.assertTrue(isChatClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.chatCategories), "Chat");
 
-    boolean isCodeInspectorPresent = driver.findElement(marketplaceLocators.codeInspectorTrending).isDisplayed();
-    Assert.assertTrue(isCodeInspectorPresent);
-    boolean isCodeInspectorClickable = elementsHelper.isClickable(marketplaceLocators.codeInspectorTrending);
-    Assert.assertTrue(isCodeInspectorClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.codeInspectorTrending), "Code Inspector");
 
     driver.findElement(marketplaceLocators.svg).click();
-    boolean isFreeFiltersPresent = driver.findElement(marketplaceLocators.freeFilters).isDisplayed();
-    Assert.assertTrue(isFreeFiltersPresent);
-    boolean isFreeFiltersClickable = elementsHelper.isClickable(marketplaceLocators.freeFilters);
-    Assert.assertTrue(isFreeFiltersClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.freeFilters), "Free");
 
-    boolean isVerifiedPresent = driver.findElement(marketplaceLocators.verifiedVerification).isDisplayed();
-    Assert.assertTrue(isVerifiedPresent);
-    boolean isVerifiedClickable = elementsHelper.isClickable(marketplaceLocators.verifiedVerification);
-    Assert.assertTrue(isVerifiedClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.verifiedVerification), "Verified");
 
-    boolean isVueggPresent = driver.findElement(marketplaceLocators.vueggRecentlyAdded).isDisplayed();
-    Assert.assertTrue(isVueggPresent);
-    boolean isVueggClickable = elementsHelper.isClickable(marketplaceLocators.vueggRecentlyAdded);
-    Assert.assertTrue(isVueggClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.vueggRecentlyAdded), "vuegg");
 
-    boolean isCodeClimatePresent = driver.findElement(marketplaceLocators.codeClimateCodeQuality).isDisplayed();
-    Assert.assertTrue(isCodeClimatePresent);
-    boolean isCodeClimateClickable = elementsHelper.isClickable(marketplaceLocators.codeClimateCodeQuality);
-    Assert.assertTrue(isCodeClimateClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.codeClimateCodeQuality), "Code Climate");
 
-    boolean isBuddyPresent = driver.findElement(marketplaceLocators.buddyCI).isDisplayed();
-    Assert.assertTrue(isBuddyPresent);
-    boolean isBuddyClickable = elementsHelper.isClickable(marketplaceLocators.buddyCI);
-    Assert.assertTrue(isBuddyClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.buddyCI), "Buddy");
 
-    boolean isSentryPresent = driver.findElement(marketplaceLocators.sentryMonitoring).isDisplayed();
-    Assert.assertTrue(isSentryPresent);
-    boolean isSentryClickable = elementsHelper.isClickable(marketplaceLocators.sentryMonitoring);
-    Assert.assertTrue(isSentryClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.sentryMonitoring), "Sentry");
 
-    boolean isStalePresent = driver.findElement(marketplaceLocators.stalePM).isDisplayed();
-    Assert.assertTrue(isStalePresent);
-    boolean isStaleClickable = elementsHelper.isClickable(marketplaceLocators.stalePM);
-    Assert.assertTrue(isStaleClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.stalePM), "Stale");
 
-    boolean isFooterTermsPresent = driver.findElement(marketplaceLocators.footerTerms).isDisplayed();
-    Assert.assertTrue(isFooterTermsPresent);
-    boolean isFooterTermsClickable = elementsHelper.isClickable(marketplaceLocators.footerTerms);
-    Assert.assertTrue(isFooterTermsClickable);
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.footerTerms), "Terms");
 
     driver.quit();
   }

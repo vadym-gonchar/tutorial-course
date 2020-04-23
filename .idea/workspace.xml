@@ -3,20 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="65c58c9b-e88d-4d68-a3e7-4da7d8e92158" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tutor/ElementsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/course/ElementsHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tutor/HeaderTabLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/course/HeaderTabLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tutor/LoginPageHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tutor/LoginPageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/course/LoginPageLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tutor/MarketplaceLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/course/MarketplaceLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tutor/MyFirstProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/course/MyFirstProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/tutorial-course.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tutor/ElementsHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tutor/HeaderTabLocators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tutor/LoginPageHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tutor/LoginPageLocators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tutor/MarketplaceLocators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tutor/MyFirstProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/course/ElementsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/course/ElementsHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/course/MyFirstProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/course/MyFirstProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/course/ElementsHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/course/ElementsHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/course/MyFirstProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/course/MyFirstProgram.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +38,7 @@
   <component name="ProjectId" id="1aJ6LDFYZ6IlMabwCZoLBsJyQjJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -83,11 +74,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyFirstProgram" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyFirstProgram.headerTabTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="tutorial-course" />
-      <option name="PACKAGE_NAME" value="tutor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="course.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="course" />
       <option name="MAIN_CLASS_NAME" value="course.MyFirstProgram" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="headerTabTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -131,10 +129,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.course" />
+        <item itemvalue="TestNG.MyFirstProgram.headerTabTest" />
         <item itemvalue="TestNG.MyFirstProgram.headerTabsTest" />
         <item itemvalue="TestNG.MyFirstProgram.loginTest" />
         <item itemvalue="TestNG.MyFirstProgram" />
-        <item itemvalue="TestNG.MyFirstProgram (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -170,34 +168,38 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="188" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586457041175" />
-    <state width="1638" height="138" key="GridCell.Tab.0.bottom" timestamp="1587594179754">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="341" key="GridCell.Tab.0.bottom" timestamp="1587645262088">
+      <screen x="0" y="23" width="1680" height="934" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654362" />
     <state width="1637" height="154" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139478" />
     <state width="1557" height="155" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
-    <state width="1638" height="138" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587594179754" />
-    <state width="1638" height="138" key="GridCell.Tab.0.center" timestamp="1587594179753">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="409" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344749" />
+    <state width="1638" height="341" key="GridCell.Tab.0.bottom/0.23.1680.934@0.23.1680.934" timestamp="1587645262088" />
+    <state width="1638" height="341" key="GridCell.Tab.0.center" timestamp="1587645262087">
+      <screen x="0" y="23" width="1680" height="934" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654361" />
     <state width="1637" height="154" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139477" />
     <state width="1557" height="155" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
-    <state width="1638" height="138" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587594179753" />
-    <state width="1638" height="138" key="GridCell.Tab.0.left" timestamp="1587594179752">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="409" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344748" />
+    <state width="1638" height="341" key="GridCell.Tab.0.center/0.23.1680.934@0.23.1680.934" timestamp="1587645262087" />
+    <state width="1638" height="341" key="GridCell.Tab.0.left" timestamp="1587645262087">
+      <screen x="0" y="23" width="1680" height="934" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654361" />
     <state width="1637" height="154" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139477" />
     <state width="1557" height="155" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
-    <state width="1638" height="138" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587594179752" />
-    <state width="1638" height="138" key="GridCell.Tab.0.right" timestamp="1587594179753">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="409" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344747" />
+    <state width="1638" height="341" key="GridCell.Tab.0.left/0.23.1680.934@0.23.1680.934" timestamp="1587645262087" />
+    <state width="1638" height="341" key="GridCell.Tab.0.right" timestamp="1587645262088">
+      <screen x="0" y="23" width="1680" height="934" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654362" />
     <state width="1637" height="154" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1586695139477" />
     <state width="1557" height="155" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
-    <state width="1638" height="138" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587594179753" />
+    <state width="1638" height="409" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344749" />
+    <state width="1638" height="341" key="GridCell.Tab.0.right/0.23.1680.934@0.23.1680.934" timestamp="1587645262088" />
     <state x="452" y="87" key="Maven.ArtifactSearchDialog" timestamp="1587372328453">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
