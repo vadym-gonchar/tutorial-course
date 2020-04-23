@@ -12,6 +12,7 @@ public class MyFirstProgram {
   HeaderTabLocators headerTabLocators = new HeaderTabLocators();
   MarketplaceLocators marketplaceLocators = new MarketplaceLocators();
   ElementsHelper elementsHelper = new ElementsHelper(driver);
+  ApiManagementLocators apiManagementLocators = new ApiManagementLocators();
 
   @Test(priority = 1)
   public void loginTest() {
@@ -67,6 +68,17 @@ public class MyFirstProgram {
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.stalePM), "Stale");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.footerTerms), "Terms");
+  }
+  @Test(priority = 4)
+  public void apiManagementPageTest(){
+    driver.get("https://github.com/marketplace/category/api-management");
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.moesif), "Moesif API Insights");
+    driver.findElement(apiManagementLocators.nextButton1).click();
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.releaseCreator), "Release Creator with Auto-Tag Generation");
+    driver.findElement(apiManagementLocators.nextButton2).click();
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.uploadToCF), "Upload to CurseForge");
+    driver.findElement(apiManagementLocators.nextButton2).click();
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.consumableCode), "Consumable Code Movie TMDB API");
 
     driver.quit();
   }
