@@ -1,16 +1,16 @@
-package githubProject;
+package GithubProjectTests;
 
-import githubProject.helpers.ElementsHelper;
-import githubProject.locators.ApiManagementLocators;
-import githubProject.locators.HeaderTabLocators;
-import githubProject.locators.LoginPageLocators;
-import githubProject.locators.MarketplaceLocators;
+import Helpers.ElementsHelper;
+import Locators.ApiManagementLocators;
+import Locators.HeaderTabLocators;
+import Locators.LoginPageLocators;
+import Locators.MarketplaceLocators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class githubProjectTests {
+public class GithubProjectTests {
   WebDriver driver = new ChromeDriver();
 
   LoginPageLocators loginPageLocators = new LoginPageLocators();
@@ -74,8 +74,9 @@ public class githubProjectTests {
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.footerTerms, 10), "Terms");
   }
+
   @Test(priority = 4)
-  public void apiManagementPageTest(){
+  public void apiManagementPageTest() {
     driver.get("https://github.com/marketplace/category/api-management");
     Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.moesif, 10), "Moesif API Insights");
     driver.findElement(apiManagementLocators.nextButton1).click();
