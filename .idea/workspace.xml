@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c58c9b-e88d-4d68-a3e7-4da7d8e92158" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helpers/ElementsHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Locators/ApiManagementLocators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Locators/HeaderTabLocators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Locators/LoginPageLocators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Locators/MarketplaceLocators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/githubProject/helpers/ElementsHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/githubProject/locators/ApiManagementLocators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/githubProject/locators/HeaderTabLocators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/githubProject/locators/LoginPageLocators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/githubProject/locators/MarketplaceLocators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/githubProject/githubProjectTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GithubProjectTests/GithubProjectTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GithubProjectTests/GithubProjectTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GithubProjectTests/GithubProjectTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helpers/ElementsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helpers/ElementsHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Locators/ApiManagementLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Locators/ApiManagementLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Locators/HeaderTabLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Locators/HeaderTabLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Locators/LoginPageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Locators/LoginPageLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Locators/MarketplaceLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Locators/MarketplaceLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/GithubProjectTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/GithubProjectTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Helpers/ElementsHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Helpers/ElementsHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/ApiManagementLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Locators/ApiManagementLocators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/MarketplaceLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Locators/MarketplaceLocators.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +59,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/GithubProject" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -172,6 +173,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="161" key="#Illuminated_Cloud" timestamp="1587670769477">
+      <screen x="0" y="23" width="1680" height="937" />
+    </state>
+    <state x="440" y="161" key="#Illuminated_Cloud/0.23.1680.937@0.23.1680.937" timestamp="1587670769477" />
     <state x="2241" y="374" width="398" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587659976968">
       <screen x="1600" y="0" width="1680" height="1010" />
     </state>
@@ -194,8 +199,8 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="188" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586457041175" />
-    <state width="1638" height="341" key="GridCell.Tab.0.bottom" timestamp="1587668422278">
-      <screen x="0" y="23" width="1680" height="937" />
+    <state width="1638" height="171" key="GridCell.Tab.0.bottom" timestamp="1587688252571">
+      <screen x="0" y="23" width="1680" height="941" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654362" />
     <state width="1637" height="265" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334167" />
@@ -203,9 +208,10 @@
     <state width="1638" height="409" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344749" />
     <state width="1638" height="341" key="GridCell.Tab.0.bottom/0.23.1680.929@0.23.1680.929" timestamp="1587650173627" />
     <state width="1638" height="341" key="GridCell.Tab.0.bottom/0.23.1680.934@0.23.1680.934" timestamp="1587645311367" />
-    <state width="1638" height="341" key="GridCell.Tab.0.bottom/0.23.1680.937@0.23.1680.937" timestamp="1587668422278" />
-    <state width="1638" height="341" key="GridCell.Tab.0.center" timestamp="1587668422277">
-      <screen x="0" y="23" width="1680" height="937" />
+    <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.937@0.23.1680.937" timestamp="1587687958237" />
+    <state width="1638" height="171" key="GridCell.Tab.0.bottom/0.23.1680.941@0.23.1680.941" timestamp="1587688252571" />
+    <state width="1638" height="171" key="GridCell.Tab.0.center" timestamp="1587688252570">
+      <screen x="0" y="23" width="1680" height="941" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654361" />
     <state width="1637" height="265" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334167" />
@@ -213,9 +219,10 @@
     <state width="1638" height="409" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344748" />
     <state width="1638" height="341" key="GridCell.Tab.0.center/0.23.1680.929@0.23.1680.929" timestamp="1587650173626" />
     <state width="1638" height="341" key="GridCell.Tab.0.center/0.23.1680.934@0.23.1680.934" timestamp="1587645311366" />
-    <state width="1638" height="341" key="GridCell.Tab.0.center/0.23.1680.937@0.23.1680.937" timestamp="1587668422277" />
-    <state width="1638" height="341" key="GridCell.Tab.0.left" timestamp="1587668422276">
-      <screen x="0" y="23" width="1680" height="937" />
+    <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.937@0.23.1680.937" timestamp="1587687958236" />
+    <state width="1638" height="171" key="GridCell.Tab.0.center/0.23.1680.941@0.23.1680.941" timestamp="1587688252569" />
+    <state width="1638" height="171" key="GridCell.Tab.0.left" timestamp="1587688252569">
+      <screen x="0" y="23" width="1680" height="941" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654361" />
     <state width="1637" height="265" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334166" />
@@ -223,9 +230,10 @@
     <state width="1638" height="409" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344747" />
     <state width="1638" height="341" key="GridCell.Tab.0.left/0.23.1680.929@0.23.1680.929" timestamp="1587650173626" />
     <state width="1638" height="341" key="GridCell.Tab.0.left/0.23.1680.934@0.23.1680.934" timestamp="1587645311365" />
-    <state width="1638" height="341" key="GridCell.Tab.0.left/0.23.1680.937@0.23.1680.937" timestamp="1587668422276" />
-    <state width="1638" height="341" key="GridCell.Tab.0.right" timestamp="1587668422278">
-      <screen x="0" y="23" width="1680" height="937" />
+    <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.937@0.23.1680.937" timestamp="1587687958236" />
+    <state width="1638" height="171" key="GridCell.Tab.0.left/0.23.1680.941@0.23.1680.941" timestamp="1587688252569" />
+    <state width="1638" height="171" key="GridCell.Tab.0.right" timestamp="1587688252570">
+      <screen x="0" y="23" width="1680" height="941" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654362" />
     <state width="1637" height="265" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334167" />
@@ -233,7 +241,8 @@
     <state width="1638" height="409" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344749" />
     <state width="1638" height="341" key="GridCell.Tab.0.right/0.23.1680.929@0.23.1680.929" timestamp="1587650173626" />
     <state width="1638" height="341" key="GridCell.Tab.0.right/0.23.1680.934@0.23.1680.934" timestamp="1587645311366" />
-    <state width="1638" height="341" key="GridCell.Tab.0.right/0.23.1680.937@0.23.1680.937" timestamp="1587668422278" />
+    <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.937@0.23.1680.937" timestamp="1587687958237" />
+    <state width="1638" height="171" key="GridCell.Tab.0.right/0.23.1680.941@0.23.1680.941" timestamp="1587688252570" />
     <state x="452" y="87" key="Maven.ArtifactSearchDialog" timestamp="1587372328453">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -16,8 +16,8 @@ public class GithubProjectTests {
   LoginPageLocators loginPageLocators = new LoginPageLocators();
   HeaderTabLocators headerTabLocators = new HeaderTabLocators();
   MarketplaceLocators marketplaceLocators = new MarketplaceLocators();
-  ElementsHelper elementsHelper = new ElementsHelper(driver);
   ApiManagementLocators apiManagementLocators = new ApiManagementLocators();
+  ElementsHelper elementsHelper = new ElementsHelper(driver);
 
   @Test(priority = 1)
   public void loginTest() {
@@ -46,21 +46,30 @@ public class GithubProjectTests {
     driver.get("https://github.com/marketplace");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.exploreFreeAppsButton, 10), "Explore free apps");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.extendGitHub).getText(), "Extend GitHub");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.findTools).getText(), "Find tools to improve your workflow");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.exploreActionsButton, 10), "Explore Actions");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.introGithub).getText(), "Introducing GitHub Actions");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.mrktplcAnnouncmnt).getText(), "An entirely new way to automate your development workflow.");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.appsTypes, 10), "Apps");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.types).getText(), "Types");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.actionsTypes, 10), "Actions");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.chatCategories, 10), "Chat");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.categories).getText(), "Categories");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.recommended).getText(), "Recommended for you");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.codeInspectorTrending, 10), "Code Inspector");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.trending).getText(), "Trending");
 
     driver.findElement(marketplaceLocators.svg).click();
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.freeFilters, 10), "Free");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.verifiedVerification, 10), "Verified");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.verification).getText(), "Verification");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.vueggRecentlyAdded, 10), "vuegg");
 
@@ -73,18 +82,25 @@ public class GithubProjectTests {
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.stalePM, 10), "Stale");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.footerTerms, 10), "Terms");
+    Assert.assertEquals(driver.findElement(marketplaceLocators.copyright).getText(), "© 2020 GitHub, Inc.");
+
   }
 
   @Test(priority = 4)
   public void apiManagementPageTest() {
     driver.get("https://github.com/marketplace/category/api-management");
     Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.moesif, 10), "Moesif API Insights");
+    Assert.assertEquals(driver.findElement(apiManagementLocators.apiMngmnt).getText(), "API management");
+    Assert.assertEquals(driver.findElement(apiManagementLocators.searchResults).getText(), "Search results");
     driver.findElement(apiManagementLocators.nextButton1).click();
     Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.releaseCreator, 10), "Release Creator with Auto-Tag Generation");
+    Assert.assertEquals(driver.findElement(apiManagementLocators.releaseCreatorSubheader).getText(), "Creates github releases");
     driver.findElement(apiManagementLocators.nextButton2).click();
     Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.uploadToCF, 10), "Upload to CurseForge");
+    Assert.assertEquals(driver.findElement(apiManagementLocators.uploadToCFSubheader).getText(), "Uploads files to CurseForge via CurseForge API");
     driver.findElement(apiManagementLocators.nextButton2).click();
     Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.consumableCode, 10), "Consumable Code Movie TMDB API");
+    Assert.assertEquals(driver.findElement(apiManagementLocators.disabledButtonText).getText(), "Next");
 
     driver.quit();
   }

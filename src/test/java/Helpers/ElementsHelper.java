@@ -10,19 +10,19 @@ import java.time.Duration;
 
 public class ElementsHelper {
 
-    WebDriver driver;
+  WebDriver driver;
 
-    public ElementsHelper(WebDriver driver) {
-      this.driver = driver;
-    }
+  public ElementsHelper(WebDriver driver) {
+    this.driver = driver;
+  }
 
-    public String getTextofClickableElement(By element, int timeout){
-      try {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-        return driver.findElement(element).getText();
-      } catch (NoSuchElementException e){
-        throw  new RuntimeException("Web element is not present: " + element, e);
-      }
+  public String getTextofClickableElement(By element, int timeout) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    try {
+      wait.until(ExpectedConditions.elementToBeClickable(element));
+      return driver.findElement(element).getText();
+    } catch (NoSuchElementException e) {
+      throw new RuntimeException("The following web element is not found: " + element, e);
     }
   }
+}
