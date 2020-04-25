@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c58c9b-e88d-4d68-a3e7-4da7d8e92158" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/GithubProjectTests/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GithubProjectTests/TestHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GithubProjectTests/GithubProjectTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GithubProjectTests/GithubProjectTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Helpers/ElementsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helpers/ElementsHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Locators/HeaderTabLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Locators/HeaderTabLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Locators/LoginPageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Locators/LogInAndOutPageLocators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/GithubProjectTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/GithubProjectTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Helpers/ElementsHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Helpers/ElementsHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/HeaderTabLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Locators/HeaderTabLocators.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/LoginPageLocators.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,21 +46,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/GithubProject" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Locators" />
       <recent name="Helpers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/GithubProject" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.GithubProjectTests (1)">
@@ -87,7 +84,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GithubProjectTests.apiManagementPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GithubProjectTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="tutorial-course" />
       <extension name="coverage">
         <pattern>
@@ -97,44 +94,41 @@
       </extension>
       <option name="PACKAGE_NAME" value="GithubProjectTests" />
       <option name="MAIN_CLASS_NAME" value="GithubProjectTests.GithubProjectTests" />
-      <option name="METHOD_NAME" value="apiManagementPageTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GithubProjectTests.headerTabTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="/Users/vadym.gonchar/IdeaProjects/tutorial-course/src/test/resources/testng-methods.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="tutorial-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="course.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="course" />
-      <option name="MAIN_CLASS_NAME" value="GithubProjectTests.GithubProjectTests" />
-      <option name="METHOD_NAME" value="headerTabTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng-methods.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GithubProjectTests.marketplacePageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="/Users/vadym.gonchar/IdeaProjects/tutorial-course/src/test/resources/testng-packages.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="tutorial-course" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GithubProjectTests.*" />
+          <option name="PATTERN" value="GithubProjectTests.GithubProjectTests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="GithubProjectTests" />
-      <option name="MAIN_CLASS_NAME" value="GithubProjectTests.GithubProjectTests" />
-      <option name="METHOD_NAME" value="marketplacePageTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng-packages.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -151,23 +145,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="githubProject" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="tutorial-course" />
-      <option name="PACKAGE_NAME" value="githubProject" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="TestNG./Users/vadym.gonchar/IdeaProjects/tutorial-course/src/test/resources/testng-packages.xml" />
+      <item itemvalue="TestNG.&lt;default&gt;" />
+      <item itemvalue="TestNG.GithubProjectTests" />
+      <item itemvalue="TestNG.GithubProjectTests (1)" />
+      <item itemvalue="TestNG./Users/vadym.gonchar/IdeaProjects/tutorial-course/src/test/resources/testng-methods.xml" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.GithubProjectTests (1)" />
+        <item itemvalue="TestNG./Users/vadym.gonchar/IdeaProjects/tutorial-course/src/test/resources/testng-packages.xml" />
+        <item itemvalue="TestNG./Users/vadym.gonchar/IdeaProjects/tutorial-course/src/test/resources/testng-methods.xml" />
+        <item itemvalue="TestNG.GithubProjectTests" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.GithubProjectTests.apiManagementPageTest" />
-        <item itemvalue="TestNG.GithubProjectTests.marketplacePageTest" />
-        <item itemvalue="TestNG.GithubProjectTests.headerTabTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +180,16 @@
       <screen x="0" y="23" width="1680" height="937" />
     </state>
     <state x="440" y="161" key="#Illuminated_Cloud/0.23.1680.937@0.23.1680.937" timestamp="1587670769477" />
+    <state x="163" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587838556950">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state x="163" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.947@0.23.1680.947" timestamp="1587838556950" />
+    <state x="163" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.949@0.23.1680.949" timestamp="1587835639678" />
+    <state x="577" y="274" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587838218502">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state x="577" y="274" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.947@0.23.1680.947" timestamp="1587838218502" />
+    <state x="577" y="275" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.949@0.23.1680.949" timestamp="1587835500382" />
     <state x="2241" y="374" width="398" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587659976968">
       <screen x="1600" y="0" width="1680" height="1010" />
     </state>
@@ -212,58 +213,62 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="188" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586457041175" />
-    <state width="1638" height="137" key="GridCell.Tab.0.bottom" timestamp="1587776286259">
-      <screen x="0" y="23" width="1680" height="929" />
+    <state width="1638" height="321" key="GridCell.Tab.0.bottom" timestamp="1587842524429">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654362" />
     <state width="1637" height="265" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334167" />
     <state width="1557" height="155" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
     <state width="1638" height="409" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344749" />
     <state width="1638" height="137" key="GridCell.Tab.0.bottom/0.23.1680.929@0.23.1680.929" timestamp="1587776286259" />
-    <state width="1638" height="137" key="GridCell.Tab.0.bottom/0.23.1680.934@0.23.1680.934" timestamp="1587771185014" />
+    <state width="1638" height="321" key="GridCell.Tab.0.bottom/0.23.1680.934@0.23.1680.934" timestamp="1587776895257" />
     <state width="1638" height="238" key="GridCell.Tab.0.bottom/0.23.1680.937@0.23.1680.937" timestamp="1587768398937" />
     <state width="1638" height="238" key="GridCell.Tab.0.bottom/0.23.1680.941@0.23.1680.941" timestamp="1587768439513" />
     <state width="1638" height="238" key="GridCell.Tab.0.bottom/0.23.1680.944@0.23.1680.944" timestamp="1587768489631" />
-    <state width="1638" height="238" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1587768839723" />
-    <state width="1638" height="137" key="GridCell.Tab.0.center" timestamp="1587776286258">
-      <screen x="0" y="23" width="1680" height="929" />
+    <state width="1638" height="321" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1587840303979" />
+    <state width="1638" height="321" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1587842524429" />
+    <state width="1638" height="321" key="GridCell.Tab.0.center" timestamp="1587842524428">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654361" />
     <state width="1637" height="265" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334167" />
     <state width="1557" height="155" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
     <state width="1638" height="409" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344748" />
     <state width="1638" height="137" key="GridCell.Tab.0.center/0.23.1680.929@0.23.1680.929" timestamp="1587776286258" />
-    <state width="1638" height="137" key="GridCell.Tab.0.center/0.23.1680.934@0.23.1680.934" timestamp="1587771185013" />
+    <state width="1638" height="321" key="GridCell.Tab.0.center/0.23.1680.934@0.23.1680.934" timestamp="1587776895257" />
     <state width="1638" height="238" key="GridCell.Tab.0.center/0.23.1680.937@0.23.1680.937" timestamp="1587768398936" />
     <state width="1638" height="238" key="GridCell.Tab.0.center/0.23.1680.941@0.23.1680.941" timestamp="1587768439512" />
     <state width="1638" height="238" key="GridCell.Tab.0.center/0.23.1680.944@0.23.1680.944" timestamp="1587768489630" />
-    <state width="1638" height="238" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1587768839722" />
-    <state width="1638" height="137" key="GridCell.Tab.0.left" timestamp="1587776286258">
-      <screen x="0" y="23" width="1680" height="929" />
+    <state width="1638" height="321" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1587840303978" />
+    <state width="1638" height="321" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1587842524428" />
+    <state width="1638" height="321" key="GridCell.Tab.0.left" timestamp="1587842524427">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654361" />
     <state width="1637" height="265" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334166" />
     <state width="1557" height="155" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
     <state width="1638" height="409" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344747" />
     <state width="1638" height="137" key="GridCell.Tab.0.left/0.23.1680.929@0.23.1680.929" timestamp="1587776286258" />
-    <state width="1638" height="137" key="GridCell.Tab.0.left/0.23.1680.934@0.23.1680.934" timestamp="1587771185013" />
+    <state width="1638" height="321" key="GridCell.Tab.0.left/0.23.1680.934@0.23.1680.934" timestamp="1587776895256" />
     <state width="1638" height="238" key="GridCell.Tab.0.left/0.23.1680.937@0.23.1680.937" timestamp="1587768398935" />
     <state width="1638" height="238" key="GridCell.Tab.0.left/0.23.1680.941@0.23.1680.941" timestamp="1587768439511" />
     <state width="1638" height="238" key="GridCell.Tab.0.left/0.23.1680.944@0.23.1680.944" timestamp="1587768489629" />
-    <state width="1638" height="238" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1587768839722" />
-    <state width="1638" height="137" key="GridCell.Tab.0.right" timestamp="1587776286259">
-      <screen x="0" y="23" width="1680" height="929" />
+    <state width="1638" height="321" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1587840303977" />
+    <state width="1638" height="321" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1587842524427" />
+    <state width="1638" height="321" key="GridCell.Tab.0.right" timestamp="1587842524429">
+      <screen x="0" y="23" width="1680" height="949" />
     </state>
     <state width="1557" height="155" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587482654362" />
     <state width="1637" height="265" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1680.1010@1600.0.1680.1010" timestamp="1587661334167" />
     <state width="1557" height="155" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587432767466" />
     <state width="1638" height="409" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587595344749" />
     <state width="1638" height="137" key="GridCell.Tab.0.right/0.23.1680.929@0.23.1680.929" timestamp="1587776286259" />
-    <state width="1638" height="137" key="GridCell.Tab.0.right/0.23.1680.934@0.23.1680.934" timestamp="1587771185013" />
+    <state width="1638" height="321" key="GridCell.Tab.0.right/0.23.1680.934@0.23.1680.934" timestamp="1587776895257" />
     <state width="1638" height="238" key="GridCell.Tab.0.right/0.23.1680.937@0.23.1680.937" timestamp="1587768398936" />
     <state width="1638" height="238" key="GridCell.Tab.0.right/0.23.1680.941@0.23.1680.941" timestamp="1587768439512" />
     <state width="1638" height="238" key="GridCell.Tab.0.right/0.23.1680.944@0.23.1680.944" timestamp="1587768489630" />
-    <state width="1638" height="238" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1587768839723" />
+    <state width="1638" height="321" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1587840303978" />
+    <state width="1638" height="321" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1587842524429" />
     <state x="452" y="87" key="Maven.ArtifactSearchDialog" timestamp="1587372328453">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -278,13 +283,14 @@
     </state>
     <state x="269" y="7" key="SettingsEditor/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587377664802" />
     <state x="280" y="7" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587413607891" />
-    <state x="533" y="302" key="com.intellij.ide.util.TipDialog" timestamp="1587724559313">
-      <screen x="0" y="23" width="1680" height="934" />
+    <state x="533" y="305" key="com.intellij.ide.util.TipDialog" timestamp="1587810828401">
+      <screen x="0" y="23" width="1680" height="947" />
     </state>
     <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587462413946" />
     <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1586875697585" />
     <state x="533" y="299" key="com.intellij.ide.util.TipDialog/0.23.1680.925@0.23.1680.925" timestamp="1587586643024" />
     <state x="533" y="302" key="com.intellij.ide.util.TipDialog/0.23.1680.934@0.23.1680.934" timestamp="1587724559313" />
+    <state x="533" y="305" key="com.intellij.ide.util.TipDialog/0.23.1680.947@0.23.1680.947" timestamp="1587810828401" />
     <state x="530" y="192" width="540" height="482" key="extract.method.dialog" timestamp="1586648979519">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -293,5 +299,8 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="508" y="55" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586637250478" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tutorial_course$_Users_vadym_gonchar_IdeaProjects_tutorial_course_src_test_resources_testng_packages_xml.ic" NAME="$PROJECT_DIR$/src/test/resources/testng-packages.xml Coverage Results" MODIFIED="1587835264824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
