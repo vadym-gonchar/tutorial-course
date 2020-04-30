@@ -20,7 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65c58c9b-e88d-4d68-a3e7-4da7d8e92158" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng-packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng-packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/GithubProjectTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/GithubProjectTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Helpers/ElementsHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Helpers/ElementsHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/ApiManagementLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Locators/ApiManagementLocators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/HeaderTabLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Locators/HeaderTabLocators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/LogInAndOutPageLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Locators/LogInAndOutPageLocators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Locators/MarketplaceLocators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Locators/MarketplaceLocators.class" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GithubProjectTests/TestHelper.class" afterDir="false" />
+>>>>>>> 803db2f1e2fbbd653c63ac0c39e4752b30ee0803
+>>>>>>> 6dee0ded3ad6acff29c8341e11f30b752bad1e11
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,12 +335,17 @@
     </state>
     <state x="269" y="7" key="SettingsEditor/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587377664802" />
     <state x="280" y="7" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587413607891" />
+<<<<<<< HEAD
+    <state x="508" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1588190517449">
+      <screen x="0" y="0" width="1600" height="860" />
+=======
     <state x="294" y="23" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1588189685929" />
     <state x="533" y="305" key="com.intellij.ide.util.TipDialog" timestamp="1587810828401">
       <screen x="0" y="23" width="1680" height="947" />
+>>>>>>> 803db2f1e2fbbd653c63ac0c39e4752b30ee0803
     </state>
-    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1587462413946" />
-    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1586875697585" />
+    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1588090105803" />
+    <state x="508" y="257" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1588190517449" />
     <state x="533" y="299" key="com.intellij.ide.util.TipDialog/0.23.1680.925@0.23.1680.925" timestamp="1587586643024" />
     <state x="533" y="302" key="com.intellij.ide.util.TipDialog/0.23.1680.934@0.23.1680.934" timestamp="1587724559313" />
     <state x="533" y="305" key="com.intellij.ide.util.TipDialog/0.23.1680.947@0.23.1680.947" timestamp="1587810828401" />
@@ -331,8 +357,5 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="508" y="55" key="refactoring.ChangeSignatureDialog/0.0.1600.860/1600.0.1680.1010@0.0.1600.860" timestamp="1586637250478" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/tutorial_course$_Users_vadym_gonchar_IdeaProjects_tutorial_course_src_test_resources_testng_packages_xml.ic" NAME="$PROJECT_DIR$/src/test/resources/testng-packages.xml Coverage Results" MODIFIED="1587835264824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
