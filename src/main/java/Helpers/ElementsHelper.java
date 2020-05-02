@@ -22,7 +22,7 @@ public class ElementsHelper {
       wait.until(ExpectedConditions.elementToBeClickable(element));
       return driver.findElement(element).getText();
     } catch (NoSuchElementException e) {
-      throw new RuntimeException("The following web element is not found: " + element, e);
+      throw new RuntimeException("The web element or its name is NOT found or it is NOT clickable: " + element, e);
     }
   }
 }

@@ -3,6 +3,12 @@
 <suite name="Suite1" verbose="1" >
     <test name="Test1"   >
         <parameter name="browser" value="${browser}"/>
+        <groups>
+            <run>
+                <include name="uitest"/>
+                <exclude name="broken"/>
+            </run>
+        </groups>
         <classes>
             <class name="GithubProjectTests.GithubProjectTests"/>
         </classes>
