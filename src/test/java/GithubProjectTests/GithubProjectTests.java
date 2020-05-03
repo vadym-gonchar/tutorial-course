@@ -20,7 +20,7 @@ public class GithubProjectTests extends TestHelper {
   @Test(priority = 2, groups = "uitest")
   public void marketplacePageTest() {
 
-    driver.get("https://github.com/marketplace");
+    driver.get(marketplaceURL);
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.exploreFreeAppsButton, 10), "Explore free apps", "The name of web element does not match the 'Explore free apps' name");
     Assert.assertEquals(driver.findElement(marketplaceLocators.extendGitHub).getText(), "Extend GitHub", "The name of web element does not match the 'Extend GitHub' name");
@@ -39,7 +39,6 @@ public class GithubProjectTests extends TestHelper {
     Assert.assertEquals(driver.findElement(marketplaceLocators.categories).getText(), "Categories", "The name of web element does not match the 'Categories' name");
     Assert.assertEquals(driver.findElement(marketplaceLocators.recommended).getText(), "Recommended for you", "The name of web element does not match the 'Recommended for you' name");
 
-    Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.codeInspectorTrending, 10), "Code Inspector", "The name of web element does not match the 'Code Inspector' name");
     Assert.assertEquals(driver.findElement(marketplaceLocators.trending).getText(), "Trending", "The name of web element does not match the 'Trending' name");
 
     driver.findElement(marketplaceLocators.svg).click();
@@ -59,13 +58,12 @@ public class GithubProjectTests extends TestHelper {
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.stalePM, 10), "Stale", "The name of web element does not match the 'Stale' name");
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(marketplaceLocators.footerTerms, 10), "Terms", "The name of web element does not match the 'Terms' name");
-//    Assert.assertEquals(driver.findElement(marketplaceLocators.copyright).getText(), "© 2020 GitHub, Inc.", "The name of web element does not match the '© 2020 GitHub, Inc.' name");
   }
 
   @Test(priority = 3, groups = "uitest")
   public void apiManagementPageTest() {
 
-    driver.get("https://github.com/marketplace/category/api-management");
+    driver.get(apiManagementURL);
 
     Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.moesif, 10), "Moesif API Insights", "The name of web element does not match the 'Moesif API Insights' name");
     Assert.assertEquals(driver.findElement(apiManagementLocators.apiMngmnt).getText(), "API management", "The name of web element does not match the 'API management' name");
@@ -82,5 +80,38 @@ public class GithubProjectTests extends TestHelper {
     driver.findElement(apiManagementLocators.nextButton2).click();
     Assert.assertEquals(elementsHelper.getTextofClickableElement(apiManagementLocators.consumableCode, 10), "Consumable Code Movie TMDB API", "The name of web element does not match the 'Consumable Code Movie TMDB API' name");
     Assert.assertEquals(driver.findElement(apiManagementLocators.disabledButtonText).getText(), "Next", "The name of web element does not match the 'Next' name");
+  }
+
+  @Test(priority = 4, groups = "uitest")
+  public void deploymentPage() {
+
+    driver.get(deploymentURL);
+
+    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.semaphore, 10), driver.findElement(deploymentLocators.semaphore).getText());
+    driver.get(deploymentURL);
+
+    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.cloud66, 10), driver.findElement(deploymentLocators.cloud66).getText());
+    driver.get(deploymentURL);
+
+    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.triggerMesh, 10), driver.findElement(deploymentLocators.triggerMesh).getText());
+    driver.get(deploymentURL);
+
+    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.decentralInet, 10), driver.findElement(deploymentLocators.decentralInet).getText());
+    driver.get(deploymentURL);
+
+    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.swiftPackage, 10), driver.findElement(deploymentLocators.swiftPackage).getText());
+  }
+
+  @Test(priority = 5, groups = "uitest")
+  public void explorePage() {
+
+    driver.get(exploreURL);
+
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(exploreLocators.exploreTab, 10), "Explore", "The name of web element does not match the 'Explore' name");
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(exploreLocators.topics, 10), "Topics", "The name of web element does not match the 'Topics' name");
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(exploreLocators.trending, 10), "Trending", "The name of web element does not match the 'Trending' name");
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(exploreLocators.collections, 10), "Collections", "The name of web element does not match the 'Collections' name");
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(exploreLocators.events, 10), "Events", "The name of web element does not match the 'Events' name");
+    Assert.assertEquals(elementsHelper.getTextofClickableElement(exploreLocators.githubSponsors, 10), "GitHub Sponsors", "The name of web element does not match the 'GitHub Sponsors' name");
   }
 }
