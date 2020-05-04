@@ -1,37 +1,42 @@
 package GithubProjectTests;
 
+import GithubProject.Browsers;
 import Helpers.ElementsHelper;
-import Locators.ApiManagementLocators;
-import Locators.HeaderTabLocators;
-import Locators.LogInAndOutPageLocators;
-import Locators.MarketplaceLocators;
+import Locators.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.safari.SafariDriver;
-import org.testng.annotations.*;
-
+import org.openqa.selenium.opera.OperaDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 public class TestBase {
 
   WebDriver driver;
 
+  String login = "aqa-tutoring";
+  String password = "aqatest123";
+  String loginURL = "https://github.com/login";
+  String marketplaceURL = "https://github.com/marketplace";
+  String apiManagementURL = "https://github.com/marketplace/category/api-management";
+  String deploymentURL = "https://github.com/marketplace?category=deployment";
+  String exploreURL = "https://github.com/explore";
+
   LogInAndOutPageLocators logInAndOutPageLocators = new LogInAndOutPageLocators();
   HeaderTabLocators headerTabLocators = new HeaderTabLocators();
   MarketplaceLocators marketplaceLocators = new MarketplaceLocators();
   ApiManagementLocators apiManagementLocators = new ApiManagementLocators();
+  DeploymentLocators deploymentLocators = new DeploymentLocators();
+  ExploreLocators exploreLocators = new ExploreLocators();
   ElementsHelper elementsHelper;
 
-  @BeforeClass
+  @BeforeSuite(alwaysRun = true)
   @Parameters("browser")
-
   public void setUp(Browsers browser) {
-    driver = new ChromeDriver();
-    elementsHelper = new ElementsHelper(driver);
-
     switch (browser) {
       case CHROME:
         WebDriverManager.chromedriver().setup();
@@ -49,15 +54,19 @@ public class TestBase {
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
         break;
+      case OPERA:
+        WebDriverManager.operadriver().setup();
+        driver = new OperaDriver();
+        break;
       default:
-        throw new RuntimeException("Invalid specified browser: " + browser + ", expected one of 'CHROME', 'FIREFOX', 'EDGE', 'IE11'");
+        throw new RuntimeException("Invalid specified browser: " + browser + ", expected one of 'CHROME', 'FIREFOX', 'EDGE', 'IE11', 'OPERA'");
     }
+    elementsHelper = new ElementsHelper(driver);
   }
-  @AfterClass
+
+  @AfterSuite(alwaysRun = true)
   public void tearDown() {
-    if (driver != null) {
-      driver.close();
+    if (driver != null)
       driver.quit();
-    }
   }
 }
