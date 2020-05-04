@@ -8,7 +8,7 @@ public class TestHelper extends TestBase {
   @BeforeClass
   public void login() {
     driver.navigate().to(loginUrl);
-    driver.manage().window().fullscreen();
+    driver.manage().window().maximize();
     driver.findElement(logInAndOutPageLocators.loginField).sendKeys("aqa-tutoring");
     driver.findElement(logInAndOutPageLocators.passwordField).sendKeys("aqatest123");
     driver.findElement(logInAndOutPageLocators.signInButton).click();

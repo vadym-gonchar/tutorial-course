@@ -29,6 +29,9 @@ public class TestBase {
   @Parameters("browser")
 
   public void setUp(Browsers browser) {
+    driver = new ChromeDriver();
+    elementsHelper = new ElementsHelper(driver);
+
     switch (browser) {
       case CHROME:
         WebDriverManager.chromedriver().setup();
@@ -49,13 +52,12 @@ public class TestBase {
       default:
         throw new RuntimeException("Invalid specified browser: " + browser + ", expected one of 'CHROME', 'FIREFOX', 'EDGE', 'IE11'");
     }
-    driver = new ChromeDriver();
-    elementsHelper = new ElementsHelper(driver);
   }
-
   @AfterClass
   public void tearDown() {
-    if (driver != null)
+    if (driver != null) {
+      driver.close();
       driver.quit();
+    }
   }
 }

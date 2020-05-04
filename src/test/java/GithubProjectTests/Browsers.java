@@ -5,5 +5,6 @@ public enum Browsers {
     FIREFOX,
     IE11,
     EDGE,
+    OPERA,
     SAFARI
 }
