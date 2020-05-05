@@ -1,7 +1,20 @@
 package GithubProjectTests;
 
+import com.google.common.collect.ImmutableList;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import static com.sun.tools.doclint.Entity.not;
+import static org.hamcrest.CoreMatchers.hasItems;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsNot.not;
 
 public class GithubProjectTests extends TestHelper {
 
@@ -86,20 +99,13 @@ public class GithubProjectTests extends TestHelper {
   public void deploymentPage() {
 
     driver.get(deploymentURL);
+    driver.findElement(deploymentLocators.searchField).sendKeys("Cloud");
+    driver.findElement(deploymentLocators.searchField).sendKeys(Keys.ENTER);
 
-    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.semaphore, 10), driver.findElement(deploymentLocators.semaphore).getText());
-    driver.get(deploymentURL);
+    assertThat(elementsHelper.getList(), hasItems("CloudBees CodeShip", "Cloud 66 Skycap", "Cloud 66 for Rails"));
+    assertThat(elementsHelper.getList(), not(hasItems("CloudBees CodeShip", "Semaphore", "Decentralized Internet", "Swift Package Registry")));
 
-    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.cloud66, 10), driver.findElement(deploymentLocators.cloud66).getText());
-    driver.get(deploymentURL);
 
-    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.triggerMesh, 10), driver.findElement(deploymentLocators.triggerMesh).getText());
-    driver.get(deploymentURL);
-
-    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.decentralInet, 10), driver.findElement(deploymentLocators.decentralInet).getText());
-    driver.get(deploymentURL);
-
-    Assert.assertEquals(elementsHelper.getTextfromInputField(deploymentLocators.swiftPackage, 10), driver.findElement(deploymentLocators.swiftPackage).getText());
   }
 
   @Test(priority = 5, groups = "uitest")
