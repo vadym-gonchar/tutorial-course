@@ -1,19 +1,14 @@
 package GithubProjectTests;
 
-import com.google.common.collect.ImmutableList;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
-import static com.sun.tools.doclint.Entity.not;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.core.IsNot.not;
 
 public class GithubProjectTests extends TestHelper {
@@ -97,15 +92,12 @@ public class GithubProjectTests extends TestHelper {
 
   @Test(priority = 4, groups = "uitest")
   public void deploymentPage() {
-
     driver.get(deploymentURL);
     driver.findElement(deploymentLocators.searchField).sendKeys("Cloud");
     driver.findElement(deploymentLocators.searchField).sendKeys(Keys.ENTER);
-
-    assertThat(elementsHelper.getList(), hasItems("CloudBees CodeShip", "Cloud 66 Skycap", "Cloud 66 for Rails"));
-    assertThat(elementsHelper.getList(), not(hasItems("CloudBees CodeShip", "Semaphore", "Decentralized Internet", "Swift Package Registry")));
-
-
+    List<String> list = elementsHelper.getList();
+    assertThat(list, hasItems ("CloudBees CodeShip"));
+    assertThat(list, not(hasItems("Semaphore")));
   }
 
   @Test(priority = 5, groups = "uitest")
