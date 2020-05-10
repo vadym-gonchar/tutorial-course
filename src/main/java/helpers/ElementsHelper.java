@@ -1,17 +1,18 @@
-package Helpers;
+package helpers;
 
-import Locators.DeploymentLocators;
+import locators.DeploymentLocators;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import org.openqa.selenium.By;
 
 public class ElementsHelper {
 
   WebDriver driver;
+  DeploymentLocators deploymentLocators = new DeploymentLocators();
 
   public ElementsHelper(WebDriver driver) {
     this.driver = driver;
@@ -26,15 +27,14 @@ public class ElementsHelper {
       throw new RuntimeException("The web element or its name is NOT found or it is NOT clickable: " + element, e);
     }
   }
+
   public List<String> getList(){
     List<String> list = new ArrayList<>();
-    List<WebElement> elements = driver.findElements(By.cssSelector("[class='d-md-flex flex-wrap mb-4'] a h3"));
+    List<WebElement> elements = driver.findElements(deploymentLocators.elementsWrapper);
     for (WebElement element : elements) {
       String text = element.getText();
       list.add(text);
     }
     return list;
   }
-
-  
 }

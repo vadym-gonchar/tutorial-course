@@ -1,4 +1,4 @@
-package GithubProject;
+package helpers;
 
 public enum Browsers {
     CHROME,

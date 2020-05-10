@@ -1,9 +1,12 @@
-package GithubProjectTests;
+package githubTests;
 
+import locators.LogInAndOutPageLocators;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class TestHelper extends TestBase {
+
+  LogInAndOutPageLocators logInAndOutPageLocators = new LogInAndOutPageLocators();
 
   @BeforeSuite(alwaysRun = true)
   public void login() {

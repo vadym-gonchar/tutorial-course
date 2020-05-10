@@ -10,7 +10,7 @@
             </run>
         </groups>
         <classes>
-            <class name="GithubProjectTests.GithubProjectTests"/>
+            <class name="githubTests.GithubTests"/>
         </classes>
     </test>
 </suite>

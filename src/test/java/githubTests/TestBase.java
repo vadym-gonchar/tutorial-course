@@ -1,8 +1,8 @@
-package GithubProjectTests;
+package githubTests;
 
-import GithubProject.Browsers;
-import Helpers.ElementsHelper;
-import Locators.*;
+import helpers.Browsers;
+import helpers.ElementsHelper;
+import locators.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,13 +25,7 @@ public class TestBase {
   String apiManagementURL = "https://github.com/marketplace/category/api-management";
   String deploymentURL = "https://github.com/marketplace?category=deployment";
   String exploreURL = "https://github.com/explore";
-
-  LogInAndOutPageLocators logInAndOutPageLocators = new LogInAndOutPageLocators();
-  HeaderTabLocators headerTabLocators = new HeaderTabLocators();
-  MarketplaceLocators marketplaceLocators = new MarketplaceLocators();
-  ApiManagementLocators apiManagementLocators = new ApiManagementLocators();
-  DeploymentLocators deploymentLocators = new DeploymentLocators();
-  ExploreLocators exploreLocators = new ExploreLocators();
+  
   ElementsHelper elementsHelper;
 
   @BeforeSuite(alwaysRun = true)
