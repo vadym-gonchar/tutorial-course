@@ -8,7 +8,7 @@ To launch this code on your local machine you must have installed the following 
 The following dependencies are used in pom.xml:
 1. Selenium-java 
 2. TestNG
-3. At least one of the following drivers: Chrome driver, Firefox driver, InternetExplorer driver, Edge driver, Opera driver
+3. The following drivers: Chrome driver, Firefox driver, InternetExplorer driver, Edge driver, Opera driver
 4. Webdrivermanager
 5. Hamcrest
 
