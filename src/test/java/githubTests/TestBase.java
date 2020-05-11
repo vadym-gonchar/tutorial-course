@@ -2,7 +2,6 @@ package githubTests;
 
 import helpers.Browsers;
 import helpers.ElementsHelper;
-import locators.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,14 +17,6 @@ public class TestBase {
 
   WebDriver driver;
 
-  String login = "aqa-tutoring";
-  String password = "aqatest123";
-  String loginURL = "https://github.com/login";
-  String marketplaceURL = "https://github.com/marketplace";
-  String apiManagementURL = "https://github.com/marketplace/category/api-management";
-  String deploymentURL = "https://github.com/marketplace?category=deployment";
-  String exploreURL = "https://github.com/explore";
-  
   ElementsHelper elementsHelper;
 
   @BeforeSuite(alwaysRun = true)
@@ -53,7 +44,8 @@ public class TestBase {
         driver = new OperaDriver();
         break;
       default:
-        throw new RuntimeException("Invalid specified browser: " + browser + ", expected one of 'CHROME', 'FIREFOX', 'EDGE', 'IE11', 'OPERA'");
+        throw new RuntimeException("Invalid specified browser: " +
+                browser + ", expected one of 'CHROME', 'FIREFOX', 'EDGE', 'IE11', 'OPERA'");
     }
     elementsHelper = new ElementsHelper(driver);
   }

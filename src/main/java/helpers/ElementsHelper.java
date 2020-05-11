@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import org.openqa.selenium.By;
 
 public class ElementsHelper {
 
@@ -18,17 +17,40 @@ public class ElementsHelper {
     this.driver = driver;
   }
 
-  public String getTextofClickableElement(By element, int timeout) {
+  public String getTextOfClickableElement(By element, int timeout) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     try {
       wait.until(ExpectedConditions.elementToBeClickable(element));
       return driver.findElement(element).getText();
     } catch (NoSuchElementException e) {
-      throw new RuntimeException("The web element or its name is NOT found or it is NOT clickable: " + element, e);
+      throw new RuntimeException("The web element or its name is NOT " +
+              "found or it is NOT clickable: " + element, e);
     }
   }
 
-  public List<String> getList(){
+  public String getTextOfVisibleElement(By element, int timeout) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    try {
+      wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+      return driver.findElement(element).getText();
+    } catch (NoSuchElementException e) {
+      throw new RuntimeException("The web element is NOT found or it is NOT visible: " + element, e);
+    }
+  }
+
+  public String getTextOfElementAndClick(By element, int timeout) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    try {
+      wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+      driver.findElement(element).click();
+      return driver.findElement(element).getText();
+    } catch (NoSuchElementException e) {
+      throw new RuntimeException("The web element or its name is NOT " +
+              "found or it is NOT visible: " + element, e);
+    }
+  }
+
+  public List<String> getList() {
     List<String> list = new ArrayList<>();
     List<WebElement> elements = driver.findElements(deploymentLocators.elementsWrapper);
     for (WebElement element : elements) {
@@ -36,5 +58,11 @@ public class ElementsHelper {
       list.add(text);
     }
     return list;
+  }
+
+  public void textEnter(String text) {
+    driver.findElement(deploymentLocators.searchField).clear();
+    driver.findElement(deploymentLocators.searchField).sendKeys(text);
+    driver.findElement(deploymentLocators.searchField).sendKeys(Keys.ENTER);
   }
 }
