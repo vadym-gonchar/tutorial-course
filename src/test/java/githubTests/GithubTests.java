@@ -3,6 +3,9 @@ package githubTests;
 import locators.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
+
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsNot.not;
@@ -174,8 +177,8 @@ public class GithubTests extends TestHelper {
   }
 
   @Test(priority = 4, groups = "uitest")
-  public void deploymentPage() {
-
+  public void deploymentPage() throws InterruptedException {
+    Thread.sleep(2000);
     driver.findElement(deploymentLocators.deploymentUrl).click();
 
     elementsHelper.textEnter("cloud");

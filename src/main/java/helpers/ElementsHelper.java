@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ElementsHelper {
 
@@ -60,9 +61,10 @@ public class ElementsHelper {
     return list;
   }
 
-  public void textEnter(String text) {
+  public void textEnter(String text) throws InterruptedException {
     driver.findElement(deploymentLocators.searchField).clear();
     driver.findElement(deploymentLocators.searchField).sendKeys(text);
     driver.findElement(deploymentLocators.searchField).sendKeys(Keys.ENTER);
+    Thread.sleep(2000);
   }
 }
