@@ -183,7 +183,7 @@ public class GithubTests extends TestHelper {
 
     elementsHelper.textEnter("cloud");
 
-    assertThat(elementsHelper.getList(), hasItems("Hetzner Cloud (unofficial)"));
+    assertThat(elementsHelper.getList(), hasItems("CloudBees CodeShip"));
 
     assertThat(elementsHelper.getList(), not(hasItems("Semaphore")));
 
