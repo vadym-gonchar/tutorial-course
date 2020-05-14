@@ -173,7 +173,7 @@ public class GithubTests extends TestHelper {
             10), "Consumable Code Movie TMDB API",
             "The name of web element does not match the 'Consumable Code Movie TMDB API' name");
 
-    Assert.assertTrue(driver.findElement(apiManagementLocators.previousButton).isEnabled());
+    Assert.assertFalse(driver.findElement(apiManagementLocators.previousButton).isEnabled());
   }
 
   @Test(priority = 4, groups = "uitest")
