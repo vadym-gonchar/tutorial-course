@@ -152,9 +152,9 @@ public class GithubTests extends TestHelper {
             "The name of web element does not match " +
                     "the 'Create Release - local' name");
 
-    Assert.assertEquals(elementsHelper.getTextOfVisibleElement(apiManagementLocators.netrcCredentials,
-            10), "Netrc Credentials",
-            "The name of web element does not match the 'Netrc Credentials' name");
+    Assert.assertEquals(elementsHelper.getTextOfVisibleElement(apiManagementLocators.office365,
+            10), "Office 365 CLI Login",
+            "The name of web element does not match the 'Office 365 CLI Login");
 
     driver.findElement(apiManagementLocators.nextButton2).click();
 

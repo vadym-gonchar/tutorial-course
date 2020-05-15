@@ -10,7 +10,7 @@ public class ApiManagementLocators {
   public By searchResults = By.xpath("//span[contains(text(),'Search results')]");
   public By nextButton1 = By.xpath("//a[contains(@class,'btn btn-outline BtnGroup-item')]");
   public By createRelease = By.xpath("//h3[contains(text(),'Create Release - local')]");
-  public By netrcCredentials = By.xpath("//h3[contains(text(),'Netrc Credentials')]");
+  public By office365 = By.xpath("//h3[contains(text(),'Office 365 CLI Login')]");
   public By nextButton2 = By.xpath("//a[contains(text(),'Next')]");
   public By uploadToCF = By.xpath("//h3[contains(text(),'Upload to CurseForge')]");
   public By uploadToCFSubheader = By.xpath("//p[contains(text(),'Uploads files to " +
