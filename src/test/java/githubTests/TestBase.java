@@ -9,13 +9,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterGroups;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.Parameters;
 
 public class TestBase {
 
-  public static WebDriver driver;
+  WebDriver driver;
 
-  public static ElementsHelper elementsHelper;
+  ElementsHelper elementsHelper;
 
   @BeforeGroups(groups = {"uitest"})
   @Parameters("browser")

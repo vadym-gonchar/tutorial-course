@@ -3,9 +3,7 @@ package githubTests;
 import helpers.Initiation;
 import locators.LogInAndOutPageLocators;
 import org.testng.annotations.AfterGroups;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeSuite;
 
 public class TestHelper extends TestBase {
 

@@ -21,5 +21,5 @@ To push the code you should:
 To run the tests in ONE SPECIFIC BROWSER use the following command: mvn package -DrunnerFile=testng -Dbrowser=CHROME
 (instead of CHROME you may also use the next browsers: FIREFOX, IE11, EDGE, OPERA)
 
-To run the tests in ALL BROWSERS use the following command: mvn package -DrunnerFile=all_browsers
+To run the tests in ALL BROWSERS use the following command: mvn clean package -DrunnerFile=all_browsers
 
