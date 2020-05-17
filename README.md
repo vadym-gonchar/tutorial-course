@@ -18,8 +18,8 @@ To push the code you should:
 3. git commit -m "write what you did"
 4. git push origin master
 
-To run the tests in ONE SPECIFIC BROWSER use the following command: mvn package -DrunnerFile=testng -Dbrowser=CHROME
-(instead of CHROME you may also use the next browsers: FIREFOX, IE11, EDGE, OPERA)
+To run the tests in ONE SPECIFIC BROWSER use the following command (instead of CHROME you may also use the next browsers: FIREFOX, IE11, EDGE, OPERA): mvn package -DrunnerFile=testng -Dbrowser=CHROME
+
 
 To run the tests in ALL BROWSERS use the following command: mvn clean package -DrunnerFile=all_browsers
 
