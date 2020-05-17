@@ -24,7 +24,8 @@
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>src/test/resources/${runnerFile}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

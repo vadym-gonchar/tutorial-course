@@ -9,17 +9,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 public class TestBase {
 
-  WebDriver driver;
+  public static WebDriver driver;
 
-  ElementsHelper elementsHelper;
+  public static ElementsHelper elementsHelper;
 
-  @BeforeSuite(alwaysRun = true)
+  @BeforeGroups(groups = {"uitest"})
   @Parameters("browser")
   public void setUp(Browsers browser) {
     switch (browser) {
@@ -50,7 +48,7 @@ public class TestBase {
     elementsHelper = new ElementsHelper(driver);
   }
 
-  @AfterSuite(alwaysRun = true)
+  @AfterGroups(groups = {"uitest"})
   public void tearDown() {
     if (driver != null)
       driver.quit();
