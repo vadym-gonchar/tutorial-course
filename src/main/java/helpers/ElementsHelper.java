@@ -29,6 +29,17 @@ public class ElementsHelper {
     }
   }
 
+  public String getAttributeOfElement(By element, int timeout) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    try {
+      wait.until(ExpectedConditions.presenceOfElementLocated(element));
+      return driver.findElement(element).getAttribute("placeholder");
+    } catch (NoSuchElementException e) {
+      throw new RuntimeException("The web element or its name is NOT " +
+              "found: " + element, e);
+    }
+  }
+
   public String getTextOfVisibleElement(By element, int timeout) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     try {

@@ -3,9 +3,6 @@ package githubTests;
 import locators.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
-
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsNot.not;
@@ -39,6 +36,10 @@ public class GithubTests extends TestHelper {
   public void marketplacePageTest() {
 
     driver.findElement(headerTabLocators.marketplace).click();
+
+    Assert.assertEquals(elementsHelper.getAttributeOfElement(marketplaceLocators.searchBox,
+            10), "Search for apps and actions",
+            "The name of web element does not match the 'Search for apps and actions' name");
 
     Assert.assertEquals(elementsHelper.getTextOfClickableElement(marketplaceLocators.exploreFreeAppsButton,
             10), "Explore free apps",
@@ -178,7 +179,11 @@ public class GithubTests extends TestHelper {
 
   @Test(priority = 4, groups = "uitest")
   public void deploymentPage() throws InterruptedException {
-    Thread.sleep(2000);
+
+    Assert.assertEquals(elementsHelper.getAttributeOfElement(marketplaceLocators.searchBox,
+            10), "Search for apps and actions",
+            "The name of web element does not match the 'Search for apps and actions' name");
+
     driver.findElement(deploymentLocators.deploymentUrl).click();
 
     elementsHelper.textEnter("cloud");
