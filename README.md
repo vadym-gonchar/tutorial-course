@@ -3,7 +3,7 @@
 To launch this code on your local machine you must have installed the following things:
 1. JDK
 2. Maven compiler and surefire plugins
-3. At least one of the following browsers: Chrome, FireFox, IE 11.0, Edge, Opera
+3. At least one of the following browsers: Chrome, FireFox, Edge, IE 11.0, Opera
 
 The following dependencies are used in pom.xml:
 1. Selenium-java 
@@ -18,8 +18,8 @@ To push the code you should:
 3. git commit -m "write what you did"
 4. git push origin master
 
-To run the tests in ONE SPECIFIC BROWSER use the following command (instead of CHROME you may also use the next browsers: FIREFOX, IE11, EDGE, OPERA): mvn package -DrunnerFile=testng -Dbrowser=CHROME
-
+To run the tests in ONE SPECIFIC BROWSER use the following command (instead of CHROME you may also use the next 
+browsers: FIREFOX, EDGE, IE11, OPERA): mvn clean package -DrunnerFile=testng -Dbrowser=CHROME
 
 To run the tests in ALL BROWSERS use the following command: mvn clean package -DrunnerFile=all_browsers
 
