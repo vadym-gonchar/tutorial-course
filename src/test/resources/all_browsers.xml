@@ -25,4 +25,16 @@
             <class name="githubTests.GithubTests"/>
         </classes>
     </test>
+    <test name="Tests for EDGE"   >
+        <parameter name="browser" value="EDGE"/>
+        <groups>
+            <run>
+                <include name="uitest"/>
+                <exclude name="broken"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="githubTests.GithubTests"/>
+        </classes>
+    </test>
 </suite>

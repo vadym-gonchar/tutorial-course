@@ -82,18 +82,26 @@ public class ElementsHelper {
     return list;
   }
 
-  public void textEnter(By element, String text) {
-        driver.findElement(element).clear();
-        driver.findElement(element).sendKeys(text);
-        driver.findElement(element).sendKeys(Keys.ENTER);
-  }
-
-  public void waitForElementPresence(By element, int timeout) {
+  public void textEnter(By element, int timeout, String text) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     try {
       wait.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfElementLocated(element)));
+      wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(element)));
+      driver.findElement(element).clear();
+      driver.findElement(element).sendKeys(text);
+      driver.findElement(element).sendKeys(Keys.ENTER);
     } catch (NoSuchElementException e) {
-      throw new RuntimeException("The web element is NOT found or it is NOT visible: " + element, e);
+      throw new RuntimeException("The web element or its name is NOT found or it is NOT visible: " + element, e);
     }
   }
+
+    public void waitForElementPresence (By element, int timeout){
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+      try {
+        wait.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfElementLocated(element)));
+        wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(element)));
+      } catch (NoSuchElementException e) {
+        throw new RuntimeException("The web element is NOT found or it is NOT visible: " + element, e);
+      }
+    }
 }

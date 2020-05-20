@@ -186,7 +186,7 @@ public class GithubTests extends TestHelper {
 
     elementsHelper.click(deploymentLocators.deploymentUrl, 10);
 
-    elementsHelper.textEnter(deploymentLocators.searchField, "cloud");
+    elementsHelper.textEnter(deploymentLocators.searchField, 10, "cloud");
 
     elementsHelper.waitForElementPresence(deploymentLocators.deployToCleverCloud, 10);
 
@@ -194,7 +194,7 @@ public class GithubTests extends TestHelper {
 
     assertThat(elementsHelper.getList(), not(hasItems("Semaphore")));
 
-    elementsHelper.textEnter(deploymentLocators.searchField, "code");
+    elementsHelper.textEnter(deploymentLocators.searchField, 10, "code");
 
     elementsHelper.waitForElementPresence(deploymentLocators.screepsDeployer, 10);
 
@@ -202,7 +202,7 @@ public class GithubTests extends TestHelper {
 
     assertThat(elementsHelper.getList(), not(hasItems("Buddy")));
 
-    elementsHelper.textEnter(deploymentLocators.searchField, "delivery");
+    elementsHelper.textEnter(deploymentLocators.searchField, 10, "delivery");
 
     elementsHelper.waitForElementPresence(deploymentLocators.setupCDtools, 10);
 
