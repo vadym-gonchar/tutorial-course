@@ -35,9 +35,9 @@ public class GithubTests extends TestHelper {
   @Test(priority = 2, groups = "uitest")
   public void marketplacePageTest() {
 
-    driver.findElement(headerTabLocators.marketplace).click();
+    elementsHelper.click(headerTabLocators.marketplace, 10);
 
-    Assert.assertEquals(elementsHelper.getAttributeOfElement(marketplaceLocators.searchBox,
+    Assert.assertEquals(elementsHelper.getAttributeOfElement(deploymentLocators.searchField,
             10), "Search for apps and actions",
             "The name of web element does not match the 'Search for apps and actions' name");
 
@@ -132,7 +132,7 @@ public class GithubTests extends TestHelper {
   @Test(priority = 3, groups = "uitest")
   public void apiManagementPageTest() {
 
-    driver.findElement(apiManagementLocators.apiMngmntUrl).click();
+    elementsHelper.click(apiManagementLocators.apiMngmntUrl, 10);
 
     Assert.assertEquals(elementsHelper.getTextOfClickableElement(apiManagementLocators.moesif, 10),
             "Moesif API Insights",
@@ -175,32 +175,38 @@ public class GithubTests extends TestHelper {
             "The name of web element does not match the 'Consumable Code Movie TMDB API' name");
 
     Assert.assertTrue(driver.findElement(apiManagementLocators.previousButton).isEnabled());
+
+    Assert.assertEquals(elementsHelper.getAttributeOfElement(deploymentLocators.searchField,
+            10), "Search for apps and actions",
+            "The name of web element does not match the 'Search for apps and actions' name");
   }
 
   @Test(priority = 4, groups = "uitest")
-  public void deploymentPage() throws InterruptedException {
+  public void deploymentPage(){
 
-    Assert.assertEquals(elementsHelper.getAttributeOfElement(marketplaceLocators.searchBox,
-            10), "Search for apps and actions",
-            "The name of web element does not match the 'Search for apps and actions' name");
+    elementsHelper.click(deploymentLocators.deploymentUrl, 10);
 
-    driver.findElement(deploymentLocators.deploymentUrl).click();
+    elementsHelper.textEnter(deploymentLocators.searchField, "cloud");
 
-    elementsHelper.textEnter("cloud");
+    elementsHelper.waitForElementPresence(deploymentLocators.deployToCleverCloud, 10);
 
-    assertThat(elementsHelper.getList(), hasItems("CloudBees CodeShip"));
+    assertThat(elementsHelper.getList(), hasItems("Deploy to Clever Cloud"));
 
     assertThat(elementsHelper.getList(), not(hasItems("Semaphore")));
 
-    elementsHelper.textEnter("code");
+    elementsHelper.textEnter(deploymentLocators.searchField, "code");
 
-    assertThat(elementsHelper.getList(), hasItems("Azure Static Website Deploy"));
+    elementsHelper.waitForElementPresence(deploymentLocators.screepsDeployer, 10);
+
+    assertThat(elementsHelper.getList(), hasItems("Screeps Deployer"));
 
     assertThat(elementsHelper.getList(), not(hasItems("Buddy")));
 
-    elementsHelper.textEnter("delivery");
+    elementsHelper.textEnter(deploymentLocators.searchField, "delivery");
 
-    assertThat(elementsHelper.getList(), hasItems("Deliverybot"));
+    elementsHelper.waitForElementPresence(deploymentLocators.setupCDtools, 10);
+
+    assertThat(elementsHelper.getList(), hasItems("Setup CD tools"));
 
     assertThat(elementsHelper.getList(), not(hasItems("Flaptastic")));
   }
@@ -208,7 +214,7 @@ public class GithubTests extends TestHelper {
   @Test(priority = 5, groups = "uitest")
   public void explorePage() {
 
-    driver.findElement(exploreLocators.exploreUrl).click();
+    elementsHelper.click(exploreLocators.exploreUrl, 10);
 
     Assert.assertEquals(elementsHelper.getTextOfClickableElement(exploreLocators.exploreTab, 10),
             "Explore", "The name of web element does not match the 'Explore' name");

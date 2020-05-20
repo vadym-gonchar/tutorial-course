@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class ElementsHelper {
 
@@ -43,6 +42,7 @@ public class ElementsHelper {
   public String getTextOfVisibleElement(By element, int timeout) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     try {
+      wait.until(ExpectedConditions.presenceOfElementLocated(element));
       wait.until(ExpectedConditions.visibilityOfElementLocated(element));
       return driver.findElement(element).getText();
     } catch (NoSuchElementException e) {
@@ -53,9 +53,19 @@ public class ElementsHelper {
   public String getTextOfElementAndClick(By element, int timeout) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     try {
-      wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+      wait.until(ExpectedConditions.presenceOfElementLocated(element));
       driver.findElement(element).click();
       return driver.findElement(element).getText();
+    } catch (NoSuchElementException e) {
+      throw new RuntimeException("The web element or its name is NOT found: " + element, e);
+    }
+  }
+
+  public void click(By element, int timeout) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    try {
+      wait.until(ExpectedConditions.presenceOfElementLocated(element));
+      driver.findElement(element).click();
     } catch (NoSuchElementException e) {
       throw new RuntimeException("The web element or its name is NOT " +
               "found or it is NOT visible: " + element, e);
@@ -72,10 +82,18 @@ public class ElementsHelper {
     return list;
   }
 
-  public void textEnter(String text) throws InterruptedException {
-    driver.findElement(deploymentLocators.searchField).clear();
-    driver.findElement(deploymentLocators.searchField).sendKeys(text);
-    driver.findElement(deploymentLocators.searchField).sendKeys(Keys.ENTER);
-    Thread.sleep(2000);
+  public void textEnter(By element, String text) {
+        driver.findElement(element).clear();
+        driver.findElement(element).sendKeys(text);
+        driver.findElement(element).sendKeys(Keys.ENTER);
+  }
+
+  public void waitForElementPresence(By element, int timeout) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    try {
+      wait.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfElementLocated(element)));
+    } catch (NoSuchElementException e) {
+      throw new RuntimeException("The web element is NOT found or it is NOT visible: " + element, e);
+    }
   }
 }

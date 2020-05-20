@@ -7,4 +7,7 @@ public class DeploymentLocators {
           "[contains(text(),'Deployment')]");
   public By searchField = By.xpath("//input[@placeholder='Search for apps and actions']");
   public By elementsWrapper = By.cssSelector("[class='d-md-flex flex-wrap mb-4'] a h3");
+  public By deployToCleverCloud = By.xpath("//h3[contains(text(),'Deploy to Clever Cloud')]");
+  public By screepsDeployer = By.xpath("//h3[contains(text(),'Screeps Deployer')]");
+  public By setupCDtools = By.xpath("//h3[contains(text(),'Setup CD tools')]");
 }

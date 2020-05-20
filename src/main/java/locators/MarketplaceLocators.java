@@ -3,7 +3,6 @@ package locators;
 import org.openqa.selenium.By;
 
 public class MarketplaceLocators {
-  public By searchBox = By.xpath("//input[@placeholder='Search for apps and actions']");
   public By exploreFreeAppsButton = By.xpath("//a[contains(text(),'Explore free apps')]");
   public By extendGitHub = By.xpath("//h1[@class='h00-mktg mb-2 ml-n1 lh-condensed-ultra']");
   public By findTools = By.xpath("//p[@class='lead-mktg mb-4 text-gray lh-condensed']");
