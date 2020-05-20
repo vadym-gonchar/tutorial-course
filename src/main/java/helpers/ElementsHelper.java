@@ -95,13 +95,13 @@ public class ElementsHelper {
     }
   }
 
-    public void waitForElementPresence (By element, int timeout){
-      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-      try {
-        wait.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfElementLocated(element)));
-        wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(element)));
-      } catch (NoSuchElementException e) {
-        throw new RuntimeException("The web element is NOT found or it is NOT visible: " + element, e);
-      }
+  public void waitForElementPresence(By element, int timeout) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    try {
+      wait.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfElementLocated(element)));
+      wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(element)));
+    } catch (NoSuchElementException e) {
+      throw new RuntimeException("The web element is NOT found or it is NOT visible: " + element, e);
     }
+  }
 }

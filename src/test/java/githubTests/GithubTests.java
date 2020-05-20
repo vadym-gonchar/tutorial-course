@@ -182,7 +182,7 @@ public class GithubTests extends TestHelper {
   }
 
   @Test(priority = 4, groups = "uitest")
-  public void deploymentPage(){
+  public void deploymentPage() {
 
     elementsHelper.click(deploymentLocators.deploymentUrl, 10);
 
