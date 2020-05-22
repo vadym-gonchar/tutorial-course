@@ -3,10 +3,8 @@ package githubTests;
 import helpers.Browsers;
 import helpers.ElementsHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -28,18 +26,6 @@ public class TestBase {
       case CHROME:
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--dns-prefetch-disable");
-        options.setCapability("enableVNC", true);
-        options.setCapability("enableVideo", false);
-        options.setAcceptInsecureCerts(true);
-        options.setCapability("sessionTimeout", "10m");
-        options.setCapability("screenResolution", "1440x900x24");
-        options.setCapability("timeZone", "America/New_York");
-        options.setPageLoadStrategy(PageLoadStrategy.NONE);
-
         break;
       case FIREFOX:
         WebDriverManager.firefoxdriver().setup();
@@ -63,6 +49,7 @@ public class TestBase {
     }
     elementsHelper = new ElementsHelper(driver);
   }
+
 
   @AfterGroups(groups = {"uitest"})
   public void tearDown() {
