@@ -22,6 +22,8 @@ public class TestBase {
   @BeforeGroups(groups = {"uitest"})
   @Parameters("browser")
   public void setUp(Browsers browser) {
+
+    WebDriverManager.chromedriver().setup();
     switch (browser) {
       case CHROME:
         WebDriverManager.chromedriver().setup();
