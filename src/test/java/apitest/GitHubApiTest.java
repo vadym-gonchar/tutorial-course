@@ -1,47 +1,20 @@
 package apitest;
 
-import io.restassured.http.ContentType;
-
-import static io.restassured.RestAssured.given;
+import helpers.apihelper.GitHubApiHelper;
+import org.testng.Assert;
 
 public class GitHubApiTest{
-  private final String token = "b15ad9d59e9e7a0a12e151ee175af8839257765e";
-  private final String Url = "https://api.github.com/";
+  public final static String TOKEN = "7c07f721ac21eebdb3c75848eb791a43dc34fcc9";
+  private final static String URL = "https://api.github.com/";
 
   public static void main(String[] args) {
-    GitHubApiTest gitHubApiTest = new GitHubApiTest();
-    gitHubApiTest.getRepos();
-    gitHubApiTest.createRepo();
-  }
+    GitHubApiHelper gitHubApiHelper = new GitHubApiHelper();
 
-  public void getRepos() {
-    given().header("Authorization", "Bearer " + token)
-            .when()
-            .get(Url + "user/repos")
-            .then().log().all()
-            .log().cookies()
-            .statusCode(200);
+    gitHubApiHelper.createNewRepo(URL, "user/repos",
+            TOKEN, "aNewRepoNameqqqdA", "Test description");
 
-  }
-
-  public void createRepo() {
-    given().header("Authorization", "Bearer " + token)
-            .contentType(ContentType.JSON)
-            .body(
-                    "{\n" +
-                            "  \"name\": \"Tests\",\n" +
-                            "  \"description\": \"This is your first repository\",\n" +
-                            "  \"homepage\": \"https://github.com\",\n" +
-                            "  \"private\": false,\n" +
-                            "  \"has_issues\": true,\n" +
-                            "  \"has_projects\": true,\n" +
-                            "  \"has_wiki\": true\n" +
-                            "}"
-            )
-            .when()
-            .post(Url + "user/repos")
-            .then().log().all()
-            .log().cookies()
-            .statusCode(201);
+    String htmlUrl = gitHubApiHelper.getRepos(URL,
+            "repos/vadym-gonchar/tutorial-course", TOKEN, "html_url" );
+    Assert.assertEquals(htmlUrl, "https://github.com/vadym-gonchar/tutorial-course");
   }
 }
